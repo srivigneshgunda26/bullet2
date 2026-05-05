@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Bullet Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">ResumeAI</div>
+        <nav class="nav">
+            <a href="#about">About</a>
+            <a href="#features">Features</a>
+            <a href="#form">Try It</a>
+            <a href="#" class="cta-btn">Get Started</a>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="main-wrapper">
+        <div class="content-section">
+            <h1 class="hero-title">The Easiest Way To Create Resume Bullets</h1>
+            
+            <!-- Feature cards -->
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>AI-Powered</h3>
+                    <p>Advanced AI creates professional bullets instantly.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Fast</h3>
+                    <p>Generate bullets in seconds, not hours.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Precise</h3>
+                    <p>Tailored to your role and experience.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Illustration Section -->
+        <div class="illustration-section">
+            <div class="illustration-card">
+                <div class="illustration-content">
+                    <div class="illustration-badge">
+                        AI-powered resume builder
+                    </div>
+                    <div class="illustration-visual">
+                        <span class="floating-dot"></span>
+                        <span class="floating-dot"></span>
+                        <span class="floating-dot"></span>
+                    </div>
+                    <div class="illustration-text">
+                        <h3>Easy to use with AI</h3>
+                        <p>Transform your experience into compelling resume bullets that get you noticed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form Section -->
+    <div class="form-section" id="form">
+        <div class="form-container">
+            <div class="form-header">
+                <h2>Generate Your Resume Bullets</h2>
+                <p>Enter your role and experience to get started</p>
+            </div>
+            
+            <form id="bulletForm">
+                <div class="form-group">
+                    <label for="role">🎯 Your Role</label>
+                    <input type="text" id="role" placeholder="e.g., AI Engineer Intern" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="experience">📝 Project / Experience</label>
+                    <textarea id="experience" rows="5" placeholder="Describe your project or experience in detail..." required></textarea>
+                </div>
+                
+                <button type="submit" id="generateBtn">Generate Bullets</button>
+            </form>
+            
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Generating with AI...</p>
+            </div>
+            <div id="error" class="error hidden"></div>
+            
+            <div id="results" class="results hidden">
+                <h2>📋 Your Resume Bullets</h2>
+                <div id="bullets"></div>
+                <div class="export-buttons">
+                    <button id="copyBtn" class="copy-btn">Copy All Bullets</button>
+                    <button id="exportPdfBtn" class="export-btn">📄 Export as Text</button>
+                    <button id="exportWordBtn" class="export-btn">📝 Export as Word</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- History Section -->
+    <div class="history-section">
+        <div class="history-container">
+            <div class="history-header-section">
+                <h2>📚 Recent History</h2>
+                <button id="clearHistoryBtn" class="clear-history-btn">Clear All</button>
+            </div>
+            <div id="history" class="history-list"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
